@@ -1,0 +1,116 @@
+/* Impostazioni generali */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('background.jpg'); /* Sostituisci con il link dell'immagine */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+}
+
+/* Header e testo iniziale */
+header {
+    background-color: rgba(0, 102, 204, 0.8); /* Aggiunto sfondo blu semi-trasparente */
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #0066cc;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #0066cc;
+}
+
+/* Opzioni per contrasto di testo */
+header, footer, main {
+    background-color: rgba(255, 255, 255, 0.9); /* Sfondo semi-trasparente per leggibilità */
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+/* Stili principali */
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #0066cc;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 0.5rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    background-color: #f4f8fc;
+    border: 1px solid #d1e0eb;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Stile dei contatti */
+#contatti p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.8;
+}
+
+/* Link Email */
+#contatti p a {
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#contatti p a:hover {
+    text-decoration: underline;
+}
+
+/* Stili del footer */
+footer {
+    background-color: #0066cc;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
