@@ -7,7 +7,6 @@
 }
 
 body {
-    line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -20,7 +19,7 @@ body {
 
 /* Header e Footer */
 header, footer {
-    background-color: rgba(0, 102, 204, 0.9); /* Sfondo blu semi-trasparente */
+    background-color: rgba(0, 102, 204, 0.9);
     color: white;
     text-align: center;
     padding: 1.5rem;
@@ -40,23 +39,52 @@ header p {
 main {
     flex: 1;
     padding: 2rem;
-    max-width: 800px;
+    max-width: 900px;
     margin: 2rem auto;
-    background-color: #ffffff;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
+/* Titoli */
 h2 {
     color: #0066cc;
-    margin-bottom: 1rem;
     font-size: 1.8rem;
     border-bottom: 2px solid #0066cc;
     padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
 }
 
-section {
-    margin-bottom: 2rem;
+h2 i {
+    margin-right: 8px;
+}
+
+/* Sezione informazioni */
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #f4f8fc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.info-box i {
+    font-size: 1.5rem;
+    color: #0066cc;
+    margin-right: 8px;
 }
 
 /* Liste */
@@ -66,27 +94,15 @@ ul {
 }
 
 ul li {
-    margin-bottom: 0.5rem;
     padding: 0.8rem;
     background-color: #f4f8fc;
     border: 1px solid #d1e0eb;
     border-radius: 8px;
     font-size: 1.1rem;
-    color: #333;
+    margin-bottom: 0.5rem;
 }
 
-/* Link Email */
-#contatti a {
-    color: #0066cc;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-#contatti a:hover {
-    text-decoration: underline;
-}
-
-/* Stili del footer */
+/* Footer */
 footer {
     text-align: center;
     padding: 1rem 0;
