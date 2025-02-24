@@ -70,14 +70,14 @@ h2 i {
 }
 
 .info-box {
-    display:grid;
+    display:flex;
     align-items: center;
     padding: 10px;
     background: #f4f8fc;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-size: 1.1rem;
-    text-align: center;
+    text-align: justify;
 }
 
 .info-box i {
