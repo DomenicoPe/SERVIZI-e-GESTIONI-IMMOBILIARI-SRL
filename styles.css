@@ -7,10 +7,11 @@
 }
 
 body {
+    line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('background.jpg'); /* Assicurati che il file esista */
+    background-image: url('background.jpg'); /* Sostituisci con il link dell'immagine */
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -55,10 +56,6 @@ h2 {
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
-}
-
-h2 i {
-    margin-right: 8px;
 }
 
 /* Sezione informazioni */
