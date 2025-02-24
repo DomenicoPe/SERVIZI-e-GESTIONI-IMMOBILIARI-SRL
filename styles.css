@@ -108,3 +108,60 @@ footer {
     padding: 1rem 0;
     font-size: 0.9rem;
 }
+
+
+/* Modalità mobile */
+@media screen and (max-width: 768px) {
+    
+    header, footer {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 1rem;
+        max-width: 95%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Liste e sezioni più compatte */
+    ul li {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+
+    /* Ottimizzazione per la sezione informazioni */
+    .info-container {
+        flex-direction: column; /* Da due colonne a una sola */
+    }
+
+    .info-box {
+        width: 100%; /* Occupa tutto lo schermo */
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .info-box i {
+        font-size: 1.3rem;
+    }
+
+    /* Miglioriamo la spaziatura tra le sezioni */
+    section {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Footer più compatto */
+    footer p {
+        font-size: 0.85rem;
+    }
+}
