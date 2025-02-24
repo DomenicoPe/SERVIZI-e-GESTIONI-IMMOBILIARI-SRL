@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+Sitemap: https://domenicope.github.io/SERVIZI-e-GESTIONI-IMMOBILIARI-SRL/sitemap.xml
