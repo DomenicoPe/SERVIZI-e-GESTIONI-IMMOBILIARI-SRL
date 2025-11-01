@@ -1,154 +1,128 @@
-/* Impostazioni generali */
+/* RESET + FONT */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 body {
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-image: url('background.jpg'); /* Sostituisci con il link dell'immagine */
+    font-family: "Poppins", sans-serif;
+    line-height: 1.7;
+    background-image: url('background.jpg');
     background-size: cover;
-    background-attachment: fixed;
     background-position: center;
-    color: #333;
+    color: #222;
+}
+/* Fallback per browser che NON supportano WebP */
+@supports not (background-image: url("background.webp")) {
+    body {
+        background-image: url('background.jpg');
+    }
 }
 
-/* Header e Footer */
-header, footer {
-    background-color: rgba(0, 102, 204, 0.9);
+
+/* GENERICA PALETTE */
+:root {
+    --primary: #0066cc;
+    --light: #f6f9ff;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* HEADER + FOOTER */
+header,
+footer {
+    background-color: rgba(0, 102, 204, 0.92);
     color: white;
     text-align: center;
-    padding: 1.2rem;
+    padding: 2rem 1rem;
     border-radius: 10px;
 }
 
 header h1 {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.3rem;
+    font-weight: 600;
 }
 
 header p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
-/* Contenuto principale */
+/* MAIN BLOCK */
 main {
     flex: 1;
-    padding: 1.5rem;
-    max-width: 900px;
+    max-width: 950px;
     margin: 2rem auto;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    background: white;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
 }
 
-/* Titoli */
+/* TITOLI SEZIONE */
 h2 {
-    color: #0066cc;
-    font-size: 1.6rem;
-    border-bottom: 2px solid #0066cc;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+    color: var(--primary);
+    font-size: 1.7rem;
+    border-bottom: 2px solid var(--primary);
+    margin-bottom: 1.4rem;
+    padding-bottom: 0.4rem;
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
-/* Sezione informazioni */
-.info-container {
-    display: grid;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-}
-
-.info-box {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    background: #f4f8fc;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    font-size: 1rem;
-    text-align: justify;
-}
-
-.info-box i {
-    font-size: 1.4rem;
-    color: #0066cc;
-    margin-right: 8px;
-}
-
-/* Liste */
+/* LISTE */
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 ul li {
-    padding: 0.8rem;
-    background-color: #f4f8fc;
-    border: 1px solid #d1e0eb;
+    background: var(--light);
+    padding: 1rem;
     border-radius: 8px;
+    border-left: 5px solid var(--primary);
+    margin-bottom: 0.7rem;
+    font-size: 1.05rem;
+}
+
+/* INFO BOX GRID */
+.info-container {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.info-box {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    background: var(--light);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
     font-size: 1rem;
-    margin-bottom: 0.5rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.8rem;
+/* HOVER ANIMATION */
+.info-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
 }
 
-/* 📱 Adattamento per smartphone */
+.info-box i {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+/* RESPONSIVO */
 @media (max-width: 768px) {
+    header h1 { font-size: 1.8rem; }
+    main { padding: 1.2rem; margin: 1rem; }
+    h2 { font-size: 1.3rem; }
+    ul li { font-size: 0.95rem; }
+    .info-box { font-size: 0.95rem; }
     body {
-        background-size: cover;
-        padding: 0;
-    }
-
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    main {
-        padding: 1rem;
-        margin: 1rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    .info-container {
-        flex-direction: column; /* Cambia disposizione da orizzontale a verticale */
-        gap: 10px;
-    }
-
-    .info-box {
-        width: 100%;
-        text-align: left;
-        padding: 10px;
-    }
-
-    .info-box i {
-        font-size: 1.3rem;
-    }
-
-    ul li {
-        font-size: 0.95rem;
-    }
-
-    footer {
-        font-size: 0.8rem;
-    }
+    background-attachment: scroll;
+}
 }
