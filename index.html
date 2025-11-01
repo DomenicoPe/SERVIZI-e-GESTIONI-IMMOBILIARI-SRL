@@ -6,27 +6,43 @@
     <meta name="description" content="SERVIZI e GESTIONI IMMOBILIARI S.R.L. - Locazioni immobiliari, gestione condominiale, servizi tecnici di ingegneria e manutenzioni edili.">
     <meta name="robots" content="index, follow">
     <title>SERVIZI e GESTIONI IMMOBILIARI S.R.L.</title>
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
+
+    <!-- AOS Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- CSS principale -->
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script> <!-- Libreria di icone -->
+
+    <!-- Icone Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+    <picture style="display:none;">
+        <source srcset="background.webp" type="image/webp">
+        <source srcset="background.jpg" type="image/jpeg">
+        <img src="background.jpg" alt="background">
+    </picture>
 
-    <header>
+
+    <header data-aos="fade-down">
         <h1>SERVIZI e GESTIONI IMMOBILIARI S.R.L.</h1>
         <p>Benvenuti sul sito ufficiale della nostra azienda.</p>
     </header>
 
     <main>
 
-        <section id="bacheca">
+        <section id="bacheca" data-aos="fade-up">
             <h2><i data-lucide="newspaper"></i> Bacheca Notizie</h2>
             <ul>
-                <li><strong>📌 Locazione di immobili e lavori edili</strong></li>
-                <li><strong>📌 Gestione amministrazioni condominiali</strong></li>
+                <li><strong>Locazione di immobili e lavori edili</strong></li>
+                <li><strong>Gestione amministrazioni condominiali</strong></li>
             </ul>
         </section>
 
-        <section id="contatti">
+        <section id="contatti" data-aos="fade-up">
             <h2><i data-lucide="mail"></i> Contatti</h2>
             <p><strong>📍 Indirizzo:</strong> Castelluccio dei Sauri (FG) Via Roma 3° Traversa Parco delle More, CAP 71025</p>
             <p><strong>📍 Sede secondaria:</strong> San Salvo (CH) Via Andrea D'Oria n. 4, CAP 66050</p>
@@ -35,38 +51,50 @@
             <p><strong>📞 Telefono:</strong> 327 3413623</p>
         </section>
 
-        <section id="informazioni">
+        <section id="informazioni" data-aos="fade-up">
             <h2><i data-lucide="info"></i> Informazioni</h2>
+
             <div class="info-container">
+
                 <div class="info-box">
                     <i data-lucide="user-check"></i>
-                    <p><strong> Responsabile Tecnico:</strong> <br> dott. Ing. Domenico Perrotti <br>
-                        <strong>Abilitato</strong> alla gestione e amministrazione di condomini. <br>
-                    <strong>Abilitato</strong> alla progettazione e redazione di Piani di sicurezza secondo D. Lgs. 626/1994 e D. Lgs. 81/2008. </p>
+                    <p><strong>Responsabile Tecnico:</strong> <br> dott. Ing. Domenico Perrotti<br>
+                    Abilitato alla gestione e amministrazione di condomini.<br>
+                    Abilitato alla redazione di Piani di sicurezza secondo D.Lgs. 626/1994 e 81/2008.</p>
                 </div>
+
                 <div class="info-box">
                     <i data-lucide="building"></i>
-                    <p> Società specializzata in locazioni immobiliari e gestione condominiale. <br></p>
+                    <p>Società specializzata in locazioni immobiliari e gestione condominiale.</p>
                 </div>
+
                 <div class="info-box">
                     <i data-lucide="clipboard-list"></i>
-                    <p> Progettazione e sicurezza D. Lgs. 81/2008 <br></p>
+                    <p>Progettazione e sicurezza secondo D.Lgs. 81/2008.</p>
                 </div>
+
                 <div class="info-box">
                     <i data-lucide="wrench"></i>
-                    <p> Lavori di costruzione e manutenzione edile. </p>
+                    <p>Lavori di costruzione e manutenzione edile.</p>
                 </div>
+
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer data-aos="fade-up">
         <p>&copy; SERVIZI e GESTIONI IMMOBILIARI S.R.L. Tutti i diritti riservati.</p>
-        <p> P. IVA 04538910714</p>
+        <p>P. IVA 04538910714</p>
     </footer>
 
     <script>
-        lucide.createIcons(); // Attiva le icone
+        lucide.createIcons();
+    </script>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900 });
     </script>
 
 </body>
