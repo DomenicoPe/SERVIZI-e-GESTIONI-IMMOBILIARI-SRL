@@ -11,15 +11,14 @@ body {
     color: #222;
 }
 
-
-/* Contenitore dell'immagine di sfondo */
+/* Sfondo dietro tutto */
 .bg-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;          /* dietro tutto il contenuto */
+    z-index: -1;
 }
 
 .bg-container img {
@@ -37,13 +36,13 @@ body {
 }
 
 /* HEADER + FOOTER */
-header,
-footer {
-    background-color: rgba(0, 102, 204, 0.92);
+header, footer {
+    background: rgba(0,102,204,0.85);
     color: white;
     text-align: center;
-    margin: 1rem;
-    padding: 1.5rem;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
 }
 
 header h1 {
@@ -56,19 +55,18 @@ header p {
     opacity: 0.9;
 }
 
-/* MAIN BLOCK */
+/* MAIN */
 main {
-    flex: 1;
     max-width: 950px;
     margin: 2rem auto;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255,255,255,0.85);
     border-radius: 14px;
     box-shadow: var(--shadow);
     backdrop-filter: blur(4px);
 }
 
-/* TITOLI SEZIONE */
+/* TITOLI */
 h2 {
     color: var(--primary);
     font-size: 1.7rem;
@@ -99,7 +97,7 @@ ul li {
 .info-container {
     display: grid;
     gap: 18px;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
 }
 
 .info-box {
@@ -113,17 +111,15 @@ ul li {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* HOVER ANIMATION */
 .info-box:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.22);
 }
 
 .info-box i {
     color: var(--primary);
     font-size: 1.5rem;
 }
-
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
@@ -132,9 +128,4 @@ ul li {
     h2 { font-size: 1.3rem; }
     ul li { font-size: 0.95rem; }
     .info-box { font-size: 0.95rem; }
-    body {
-    background-attachment: scroll;
-}
-
-
 }

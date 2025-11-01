@@ -21,19 +21,19 @@
 </head>
 <body>
 
+    <!-- Sfondo dietro tutto -->
+    <picture class="bg-container">
+        <source srcset="background.webp" type="image/webp">
+        <img src="background.jpg" alt="Background" class="bg">
+    </picture>
+
     <header data-aos="fade-down">
         <h1>SERVIZI e GESTIONI IMMOBILIARI S.R.L.</h1>
         <p>Benvenuti sul sito ufficiale della nostra azienda.</p>
     </header>
 
-    <main>
-        <picture>
-            <source srcset="background.webp" type="image/webp">
-            <img src="background.jpg" alt="Background" class="bg">
-        </picture>
-
-
-        <section id="bacheca" data-aos="fade-up">
+    <main data-aos="fade-up">
+        <section id="bacheca">
             <h2><i data-lucide="newspaper"></i> Bacheca Notizie</h2>
             <ul>
                 <li><strong>Locazione di immobili e lavori edili</strong></li>
@@ -41,7 +41,7 @@
             </ul>
         </section>
 
-        <section id="contatti" data-aos="fade-up">
+        <section id="contatti">
             <h2><i data-lucide="mail"></i> Contatti</h2>
             <p><strong>📍 Indirizzo:</strong> Castelluccio dei Sauri (FG) Via Roma 3° Traversa Parco delle More, CAP 71025</p>
             <p><strong>📍 Sede secondaria:</strong> San Salvo (CH) Via Andrea D'Oria n. 4, CAP 66050</p>
@@ -50,33 +50,27 @@
             <p><strong>📞 Telefono:</strong> 327 3413623</p>
         </section>
 
-        <section id="informazioni" data-aos="fade-up">
+        <section id="informazioni">
             <h2><i data-lucide="info"></i> Informazioni</h2>
-
             <div class="info-container">
-
                 <div class="info-box">
                     <span class="emoji">📌</span>
                     <p><strong>Responsabile Tecnico:</strong> <br> dott. Ing. Domenico Perrotti<br>
                     Abilitato alla gestione e amministrazione di condomini.<br>
                     Abilitato alla redazione di Piani di sicurezza secondo D.Lgs. 626/1994 e 81/2008.</p>
                 </div>
-
                 <div class="info-box">
                     <span class="emoji">🏢</span>
                     <p>Società specializzata in locazioni immobiliari e gestione condominiale.</p>
                 </div>
-
                 <div class="info-box">
                     <span class="emoji">📋</span>
                     <p>Progettazione e sicurezza secondo D.Lgs. 81/2008.</p>
                 </div>
-
                 <div class="info-box">
                     <span class="emoji">🛠️</span>
                     <p>Lavori di costruzione e manutenzione edile.</p>
                 </div>
-
             </div>
         </section>
     </main>
@@ -87,11 +81,10 @@
     </footer>
 
     <script>
-        lucide.createIcons();
+        lucide.createIcons(); // Attiva le icone
     </script>
 
-    <!-- AOS Animation -->
-    <script src="aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 900 });
     </script>
