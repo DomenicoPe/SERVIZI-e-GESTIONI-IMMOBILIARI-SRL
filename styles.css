@@ -9,17 +9,18 @@ body {
     font-family: "Poppins", sans-serif;
     line-height: 1.7;
     color: #222;
+    /* fallback JPG */
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-/* STILE PER LO SFONDO CON PICTURE */
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+/* sovrascrive se il browser supporta WebP */
+@supports (background-image: url('background.webp')) {
+    body {
+        background-image: url('background.webp');
+    }
 }
 /* Fallback per browser che NON supportano WebP */
 @supports not (background-image: url("background.webp")) {
