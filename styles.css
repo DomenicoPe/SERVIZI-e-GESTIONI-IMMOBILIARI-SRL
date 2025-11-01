@@ -7,35 +7,29 @@
 
 html, body {
     height: 100%;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.7;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    line-height: 1.7;
-    color: #222;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* garantisce che il footer resti in fondo */
+    min-height: 100vh;
+    color: #222;
 }
 
-/* Sfondo dietro tutto */
-.bg-container {
-    position: fixed;
+/* SFONDO */
+.background {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
     z-index: -1;
 }
 
-.bg-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* GENERICA PALETTE */
+/* PALETTA COLORI */
 :root {
     --primary: #0066cc;
     --light: #f6f9ff;
@@ -44,11 +38,11 @@ body {
 
 /* HEADER + FOOTER */
 header, footer {
-    background: rgba(0,102,204,0.85);
+    background-color: rgba(0, 102, 204, 0.92);
     color: white;
     text-align: center;
     padding: 2rem 1rem;
-    backdrop-filter: blur(4px);
+    /* border-radius eliminato */
 }
 
 header h1 {
@@ -63,17 +57,15 @@ header p {
 
 /* MAIN */
 main {
+    flex: 1;
     max-width: 950px;
     margin: 2rem auto;
     padding: 2rem;
-    background: rgba(255,255,255,0.85);
-    border-radius: 14px;
-    box-shadow: var(--shadow);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(4px);
-    flex: 1; /* fa “spingere” il main per occupare lo spazio disponibile */
 }
 
-/* TITOLI */
+/* TITOLI SEZIONE */
 h2 {
     color: var(--primary);
     font-size: 1.7rem;
@@ -104,7 +96,7 @@ ul li {
 .info-container {
     display: grid;
     gap: 18px;
-    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .info-box {
@@ -120,10 +112,10 @@ ul li {
 
 .info-box:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.22);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
 }
 
-.info-box i {
+.info-box i, .info-box .emoji {
     color: var(--primary);
     font-size: 1.5rem;
 }
@@ -135,4 +127,7 @@ ul li {
     h2 { font-size: 1.3rem; }
     ul li { font-size: 0.95rem; }
     .info-box { font-size: 0.95rem; }
+    body {
+        background-attachment: scroll; /* previene glitch su mobile */
+    }
 }
