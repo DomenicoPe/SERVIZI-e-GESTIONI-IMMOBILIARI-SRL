@@ -1,96 +1,552 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SERVIZI e GESTIONI IMMOBILIARI S.R.L. - Locazioni immobiliari, gestione condominiale, servizi tecnici di ingegneria e manutenzioni edili.">
+    <meta name="description"
+        content="SERVIZI e GESTIONI IMMOBILIARI S.R.L. - Locazioni immobiliari, amministrazioni condominiali, servizi tecnici di ingegneria e manutenzioni edili.">
+    <meta name="keywords"
+        content="Servizi e Gestioni Immobiliari, Amministrazioni Condominiali Foggia, Castelluccio dei Sauri, San Salvo, Locazioni Immobiliari, Lavori Edili, Sicurezza Cantieri">
+    <meta name="theme-color" content="#0066f5">
     <meta name="robots" content="index, follow">
-    <title>Servizi e Gestioni Immobiliari SRL – Amministrazioni condominiali</title>
+    <title>SERVIZI e GESTIONI IMMOBILIARI S.R.L. | Amministrazioni Condominiali e Servizi Edili</title>
 
-    <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
+    <!-- Favicon (Palazzo stilizzato in SVG vettoriale nitido) -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-    <!-- AOS Scroll Animations -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://domenicope.github.io/SERVIZI-e-GESTIONI-IMMOBILIARI-SRL/">
 
-    <!-- CSS principale -->
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://domenicope.github.io/SERVIZI-e-GESTIONI-IMMOBILIARI-SRL/">
+    <meta property="og:title" content="SERVIZI e GESTIONI IMMOBILIARI S.R.L. | Amministrazioni Condominiali e Servizi Edili">
+    <meta property="og:description"
+        content="Locazioni immobiliari, gestione e amministrazione condominiale, progettazione, sicurezza e manutenzioni edili.">
+    <meta property="og:image" content="https://domenicope.github.io/SERVIZI-e-GESTIONI-IMMOBILIARI-SRL/background.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://domenicope.github.io/SERVIZI-e-GESTIONI-IMMOBILIARI-SRL/">
+    <meta name="twitter:title" content="SERVIZI e GESTIONI IMMOBILIARI S.R.L. | Amministrazioni Condominiali e Servizi Edili">
+    <meta name="twitter:description"
+        content="Locazioni immobiliari, gestione e amministrazione condominiale, progettazione, sicurezza e manutenzioni edili.">
+    <meta name="twitter:image" content="https://domenicope.github.io/SERVIZI-e-GESTIONI-IMMOBILIARI-SRL/background.jpg">
+
+    <!-- Structured Data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "SERVIZI e GESTIONI IMMOBILIARI S.R.L.",
+      "image": "https://domenicope.github.io/SERVIZI-e-GESTIONI-IMMOBILIARI-SRL/background.jpg",
+      "@id": "https://domenicope.github.io/SERVIZI-e-GESTIONI-IMMOBILIARI-SRL/",
+      "url": "https://domenicope.github.io/SERVIZI-e-GESTIONI-IMMOBILIARI-SRL/",
+      "email": "servizigestionalisrl@libero.it",
+      "telephone": "+393273413623",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Roma 3° Traversa Parco delle More",
+        "addressLocality": "Castelluccio dei Sauri",
+        "addressRegion": "FG",
+        "postalCode": "71025",
+        "addressCountry": "IT"
+      },
+      "taxID": "04538910714",
+      "description": "Società specializzata in locazioni immobiliari, gestione e amministrazione condominiale, progettazione tecnica e manutenzioni edili."
+    }
+    </script>
+
+    <!-- Google Fonts: Inter (SIL Open Font License 1.1 - 100% Free & Open Source) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
-
-    <!-- Icone Lucide -->
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
+    <!-- Sfondo fotografico originale sempre visibile e fisso con overlay di profondità -->
+    <div class="bg-fixed"></div>
+    <div class="bg-overlay"></div>
 
-    <!-- Sfondo dietro tutto -->
-    <picture class="bg-container">
-        <source srcset="background.webp" type="image/webp">
-        <img src="background.jpg" alt="Background" class="bg">
-    </picture>
+    <!-- Floating Glass Header con shrink dinamico -->
+    <header class="glass-header">
+        <nav class="nav-container">
+            <div class="brand-logo">
+                <span class="logo-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </span>
+                <span class="logo-text">SERVIZI e GESTIONI IMMOBILIARI S.R.L.</span>
+            </div>
 
-    <header data-aos="fade-down">
-        <h1>SERVIZI e GESTIONI IMMOBILIARI S.R.L.</h1>
-        <p>Benvenuti sul sito ufficiale della nostra azienda.</p>
+            <div class="nav-menu">
+                <a href="#servizi" class="nav-link">Servizi</a>
+                <a href="#informazioni" class="nav-link">Informazioni</a>
+                <a href="#contatti" class="nav-link">Contatti</a>
+            </div>
+
+            <div class="nav-cta">
+                <a href="mailto:servizigestionali@arubapec.it" class="btn btn-sm btn-primary">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>Scrivici PEC</span>
+                </a>
+            </div>
+        </nav>
     </header>
 
-    <main data-aos="fade-up">
-        <section id="bacheca">
-            <h2><i data-lucide="newspaper"></i> Bacheca Notizie</h2>
-            <ul>
-                <li><strong>Locazione di immobili e lavori edili</strong></li>
-                <li><strong>Gestione amministrazioni condominiali</strong></li>
-            </ul>
+    <main class="main-wrapper">
+        <!-- Hero Section Glass Card -->
+        <section class="hero-section glass-card">
+            <div class="pill-badge">
+                <span class="badge-dot"></span>
+                <span>Società di Gestione Condominiale & Servizi Immobiliari</span>
+            </div>
+
+            <h1 class="hero-title">
+                Amministrazione, locazione e valorizzazione tecnica del patrimonio immobiliare.
+            </h1>
+
+            <p class="hero-subtitle">
+                SERVIZI e GESTIONI IMMOBILIARI S.R.L. offre una gestione professionale e trasparente di condomini, locazioni di unità residenziali/commerciali e manutenzioni edili.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#contatti" class="btn btn-lg btn-primary">
+                    <span>Contattaci Subito</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a href="#servizi" class="btn btn-lg btn-glass">
+                    <span>Scopri le Attività</span>
+                </a>
+            </div>
+
+            <!-- Quick Metrics Cards -->
+            <div class="metrics-grid">
+                <div class="metric-card glass-card-nested">
+                    <div class="metric-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                            <line x1="9" y1="22" x2="9" y2="22.01"></line>
+                            <line x1="15" y1="22" x2="15" y2="22.01"></line>
+                            <line x1="9" y1="6" x2="9" y2="6.01"></line>
+                            <line x1="15" y1="6" x2="15" y2="6.01"></line>
+                            <line x1="9" y1="10" x2="9" y2="10.01"></line>
+                            <line x1="15" y1="10" x2="15" y2="10.01"></line>
+                            <line x1="9" y1="14" x2="9" y2="14.01"></line>
+                            <line x1="15" y1="14" x2="15" y2="14.01"></line>
+                            <line x1="9" y1="18" x2="9" y2="18.01"></line>
+                            <line x1="15" y1="18" x2="15" y2="18.01"></line>
+                        </svg>
+                    </div>
+                    <div class="metric-info">
+                        <span class="metric-val">Condominii</span>
+                        <span class="metric-desc">Gestione e amministrazione</span>
+                    </div>
+                </div>
+
+                <div class="metric-card glass-card-nested">
+                    <div class="metric-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                    </div>
+                    <div class="metric-info">
+                        <span class="metric-val">Opere Edili</span>
+                        <span class="metric-desc">Costruzioni e manutenzioni</span>
+                    </div>
+                </div>
+
+                <div class="metric-card glass-card-nested">
+                    <div class="metric-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <div class="metric-info">
+                        <span class="metric-val">Sicurezza D.Lgs 81/08</span>
+                        <span class="metric-desc">Piani e consulenza tecnica</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="contatti">
-            <h2><i data-lucide="mail"></i> Contatti</h2>
-            <p><strong>📍 Indirizzo:</strong> Castelluccio dei Sauri (FG) Via Roma 3° Traversa Parco delle More, CAP 71025</p>
-            <p><strong>📍 Sede secondaria:</strong> San Salvo (CH) Via Andrea D'Oria n. 4, CAP 66050</p>
-            <p><strong>📧 Email:</strong> <a href="mailto:servizigestionalisrl@libero.it">servizigestionalisrl@libero.it</a></p>
-            <p><strong>📨 PEC:</strong> <a href="mailto:servizigestionali@arubapec.it">servizigestionali@arubapec.it</a></p>
-            <p class="telefono"><strong>📞 Telefono:</strong> 327 3413623</p>
+        <!-- Activities / Bento Grid Section -->
+        <section id="servizi" class="content-section">
+            <div class="section-header">
+                <span class="section-tag">Aree di Attività</span>
+                <h2 class="section-title">Servizi Integrati per l'Edilizia e il Condominio</h2>
+                <p class="section-desc">Dalla gestione condominiale alle opere di manutenzione e locazione immobiliare.</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Bento Card 1: Gestione Condominiale -->
+                <div class="bento-card bento-span-2 glass-card">
+                    <div class="bento-icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                            <line x1="9" y1="22" x2="9" y2="22.01"></line>
+                            <line x1="15" y1="22" x2="15" y2="22.01"></line>
+                            <line x1="9" y1="6" x2="9" y2="6.01"></line>
+                            <line x1="15" y1="6" x2="15" y2="6.01"></line>
+                            <line x1="9" y1="10" x2="9" y2="10.01"></line>
+                            <line x1="15" y1="10" x2="15" y2="10.01"></line>
+                            <line x1="9" y1="14" x2="9" y2="14.01"></line>
+                            <line x1="15" y1="14" x2="15" y2="14.01"></line>
+                            <line x1="9" y1="18" x2="9" y2="18.01"></line>
+                            <line x1="15" y1="18" x2="15" y2="18.01"></line>
+                        </svg>
+                    </div>
+                    <div class="bento-content">
+                        <h3>Gestione e Amministrazione Condominiale</h3>
+                        <p>
+                            Amministrazione qualificata di condomini e complessi residenziali. Garantiamo trasparenza contabile, gestione tempestiva delle manutenzioni ordinarie/straordinarie e rispetto puntuale delle assemblee e normative di legge.
+                        </p>
+                        <div class="bento-pills">
+                            <span class="feature-pill">Amministrazione Trasparente</span>
+                            <span class="feature-pill">Gestione Manutenzioni</span>
+                            <span class="feature-pill">Ripartizione Spese</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Card 2: Lavori Edili -->
+                <div class="bento-card glass-card">
+                    <div class="bento-icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="bento-content">
+                        <h3>Lavori di Costruzione & Manutenzione Edile</h3>
+                        <p>
+                            Esecuzione di opere di costruzione, rifacimento facciate, impermeabilizzazioni e manutenzione fabbricati con squadre tecniche specializzate.
+                        </p>
+                        <div class="bento-pills">
+                            <span class="feature-pill">Ristrutturazioni</span>
+                            <span class="feature-pill">Opere Murarie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Card 3: Locazioni Immobiliari -->
+                <div class="bento-card glass-card">
+                    <div class="bento-icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <div class="bento-content">
+                        <h3>Locazione Immobili</h3>
+                        <p>
+                            Gestione e conduzione di locazioni per unità immobiliari a uso abitativo e commerciale, con conduzione contrattuale rigorosa e puntuale.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bento Card 4: Sicurezza Cantieri -->
+                <div class="bento-card bento-span-2 glass-card">
+                    <div class="bento-icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <div class="bento-content">
+                        <h3>Progettazione & Sicurezza Cantieri (D.Lgs. 81/08)</h3>
+                        <p>
+                            Redazione piani di sicurezza (POS, PSC, DVR), coordinamento in fase di progettazione ed esecuzione secondo le normative vigenti in materia di salute e sicurezza nei luoghi di lavoro e nei cantieri edili.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="informazioni">
-            <h2><i data-lucide="info"></i> Informazioni</h2>
-            <div class="info-container">
-                <div class="info-box">
-                    <span class="emoji">📌</span>
-                    <p><strong>Responsabile Tecnico:</strong> <br> dott. Ing. Domenico Perrotti<br>
-                    Abilitato alla gestione e amministrazione di condomini.<br>
-                    Abilitato alla redazione di Piani di sicurezza secondo D.Lgs. 626/1994 e 81/2008.</p>
+        <!-- Technical Responsibility Section -->
+        <section id="informazioni" class="content-section">
+            <div class="section-header">
+                <span class="section-tag">Competenza Tecnica</span>
+                <h2 class="section-title">Responsabile Tecnico & Qualifiche</h2>
+                <p class="section-desc">Garanzia professionale e certificata per ogni incarico.</p>
+            </div>
+
+            <div class="tech-card glass-card">
+                <div class="tech-layout">
+                    <div class="tech-avatar-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div class="tech-content">
+                        <h3>dott. Ing. Domenico Perrotti</h3>
+                        <span class="tech-role">Responsabile Tecnico della Società</span>
+                        <ul class="tech-bullets">
+                            <li>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Abilitato alla gestione e amministrazione professionale di condomini.</span>
+                            </li>
+                            <li>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Abilitato alla redazione di Piani di Sicurezza secondo D.Lgs. 626/1994 e D.Lgs. 81/2008.</span>
+                            </li>
+                            <li>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Esperienza ingegneristica applicata all'edilizia, agli impianti e alla gestione del valore patrimoniale.</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="info-box">
-                    <span class="emoji">🏢</span>
-                    <p>Società specializzata in locazioni immobiliari e gestione condominiale.</p>
-                </div>
-                <div class="info-box">
-                    <span class="emoji">📋</span>
-                    <p>Progettazione e sicurezza secondo D.Lgs. 81/2008.</p>
-                </div>
-                <div class="info-box">
-                    <span class="emoji">🛠️</span>
-                    <p>Lavori di costruzione e manutenzione edile.</p>
+            </div>
+        </section>
+
+        <!-- Company & Contact Showcase (Revolut Style Card) -->
+        <section id="contatti" class="content-section">
+            <div class="section-header">
+                <span class="section-tag">Contatti Ufficiali</span>
+                <h2 class="section-title">Sedi e Recapiti</h2>
+                <p class="section-desc">Canali ufficiali per comunicazioni amministrative, condominiali e richieste tecniche.</p>
+            </div>
+
+            <div class="contact-card glass-card">
+                <div class="contact-layout">
+                    <!-- Left: Details -->
+                    <div class="contact-details">
+                        <div class="company-badge-row">
+                            <span class="company-name">SERVIZI e GESTIONI IMMOBILIARI S.R.L.</span>
+                            <span class="vat-badge">P.IVA 04538910714</span>
+                        </div>
+
+                        <p class="company-intro">
+                            Rivolgiti a noi per richieste relative a condomìni amministrati, informazioni su locazioni e preventivi per manutenzioni edili.
+                        </p>
+
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <span class="label">Sede Principale</span>
+                                    <span class="val">Via Roma 3° Traversa Parco delle More — 71025 Castelluccio dei Sauri (FG)</span>
+                                </div>
+                                <button type="button" class="btn-copy" onclick="copyText('Via Roma 3° Traversa Parco delle More, 71025 Castelluccio dei Sauri (FG)', this)" title="Copia sede principale">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <span class="label">Sede Secondaria</span>
+                                    <span class="val">Via Andrea D'Oria n. 4 — 66050 San Salvo (CH)</span>
+                                </div>
+                                <button type="button" class="btn-copy" onclick="copyText('Via Andrea D\'Oria n. 4, 66050 San Salvo (CH)', this)" title="Copia sede secondaria">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <span class="label">Telefono Diretto</span>
+                                    <a href="tel:3273413623" class="val val-link">327 3413623</a>
+                                </div>
+                                <button type="button" class="btn-copy" onclick="copyText('327 3413623', this)" title="Copia Telefono">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <span class="label">Email Ordinaria</span>
+                                    <a href="mailto:servizigestionalisrl@libero.it" class="val val-link">servizigestionalisrl@libero.it</a>
+                                </div>
+                                <button type="button" class="btn-copy" onclick="copyText('servizigestionalisrl@libero.it', this)" title="Copia Email">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <span class="label">Posta Elettronica Certificata (PEC)</span>
+                                    <a href="mailto:servizigestionali@arubapec.it" class="val val-link">servizigestionali@arubapec.it</a>
+                                </div>
+                                <button type="button" class="btn-copy" onclick="copyText('servizigestionali@arubapec.it', this)" title="Copia PEC">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                        <path d="M7 15h0M2 9.5h20"></path>
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <span class="label">Partita IVA & Codice Fiscale</span>
+                                    <span class="val">04538910714</span>
+                                </div>
+                                <button type="button" class="btn-copy" onclick="copyText('04538910714', this)" title="Copia Partita IVA">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Direct Contact CTA Box -->
+                    <div class="contact-action-box glass-card-nested">
+                        <div class="action-box-content">
+                            <div class="action-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </div>
+                            <h3>Invia una comunicazione</h3>
+                            <p>Per richieste ordinarie, segnalazioni condominiali o comunicazioni ufficiali via PEC.</p>
+                            <a href="mailto:servizigestionali@arubapec.it" class="btn btn-block btn-primary">
+                                <span>Scrivi via PEC</span>
+                            </a>
+                            <a href="mailto:servizigestionalisrl@libero.it" class="btn btn-block btn-glass" style="margin-top: 0.65rem;">
+                                <span>Scrivi via Email</span>
+                            </a>
+                            <span class="action-subtext">Risposta celere tramite canali ufficiali</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer data-aos="fade-up">
-        <p>&copy; SERVIZI e GESTIONI IMMOBILIARI S.R.L. Tutti i diritti riservati.</p>
-        <p>P. IVA 04538910714</p>
+    <!-- Clean Apple-style Minimal Footer -->
+    <footer class="glass-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="logo-text">SERVIZI e GESTIONI IMMOBILIARI S.R.L.</span>
+                    <p class="footer-tagline">Locazioni immobiliari, amministrazioni condominiali e manutenzioni edili</p>
+                </div>
+                <div class="footer-nav">
+                    <a href="#servizi">Servizi</a>
+                    <a href="#informazioni">Informazioni</a>
+                    <a href="#contatti">Contatti</a>
+                    <a href="mailto:servizigestionali@arubapec.it">PEC Ufficiale</a>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year">2026</span> SERVIZI e GESTIONI IMMOBILIARI S.R.L. — Tutti i diritti riservati.</p>
+                <p class="footer-legal">P.IVA 04538910714 · Sede: Via Roma 3° Traversa Parco delle More, 71025 Castelluccio dei Sauri (FG)</p>
+            </div>
+        </div>
     </footer>
-    <div class="footer-gradient"></div>
 
-    
+    <!-- Toast Notification for Copy -->
+    <div id="toast" class="toast">Testo copiato negli appunti!</div>
 
+    <!-- Minimal Script (Vanilla JS - Zero Dependencies) -->
     <script>
-        lucide.createIcons(); // Attiva le icone
-    </script>
+        // Update Year
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-    <script src="aos.js"></script>
-    <script>
-        AOS.init({ duration: 900 });
-    </script>
+        // Dynamic Header Shrink on Scroll (Apple-style)
+        const header = document.querySelector('.glass-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }, { passive: true });
 
+        // Smooth Scroll maintaining clean URL without #hash
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId && targetId !== '#') {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Copy Helper
+        function copyText(text, btnElement) {
+            navigator.clipboard.writeText(text).then(function() {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 2500);
+
+                if (btnElement) {
+                    btnElement.classList.add('copied');
+                    setTimeout(() => btnElement.classList.remove('copied'), 1500);
+                }
+            }).catch(function(err) {
+                console.error('Errore copia', err);
+            });
+        }
+    </script>
 </body>
+
 </html>
